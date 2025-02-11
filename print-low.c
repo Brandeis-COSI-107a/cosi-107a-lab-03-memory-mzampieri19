@@ -8,9 +8,9 @@ int main(int argc, char *argv[]) {
     }
 
     for (int i = 1; i < argc; i++) {
-        unsigned int num = strtoul(argv[i], NULL, 10); // Convert to unsigned integer
-        unsigned int low_8_bits = num & 0xFF; // Extract low-order 8 bits
-        printf("%2d 0x%02X %3d\n", i, low_8_bits, low_8_bits); // Print argument number, hex, and decimal values
+        unsigned int num = strtoul(argv[i], NULL, 0);  
+        unsigned int low_8_bits = num & 0xFF;
+        printf("%d 0x%02X %3d\n", i, low_8_bits, low_8_bits); 
     }
 
     return 0;

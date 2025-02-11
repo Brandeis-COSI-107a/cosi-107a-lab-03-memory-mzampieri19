@@ -8,10 +8,13 @@ int main(int argc, char *argv[]) {
     }
 
     for (int i = 1; i < argc; i++) {
-        unsigned int num = strtoul(argv[i], NULL, 10); // Convert to unsigned integer
-        unsigned int byte1 = (num >> 8) & 0xFF; // Extract byte 1
-        printf("%2d 0x%02X %3d\n", i, byte1, byte1); // Print argument number, hex, and decimal values
+        unsigned int num = strtoul(argv[i], NULL, 0);  
+        unsigned int byte1 = (num >> 8) & 0xFF;  
+        printf("0x%02X %3d\n", byte1, byte1); 
     }
 
     return 0;
 }
+
+
+
